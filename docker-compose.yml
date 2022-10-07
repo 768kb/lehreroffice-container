@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  lehreroffice:
+    build: ./ubuntu20
+    container_name: chasperli
+    hostname: chasperli
+    network_mode: host
+    volumes:
+      - /home/laura:/home/laura
+      - /opt/LehrerOffice:/opt/LehrerOffice:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /etc/machine-id:/etc/machine-id:ro
+    environment:
+      - DISPLAY=$DISPLAY
+      - hexkey=$hexkey
+      - TZ=Europe/Zurich
+    restart: "no"
+...
