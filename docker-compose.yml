@@ -3,7 +3,6 @@ version: "2.1"
 services:
   lehreroffice:
     build: ./ubuntu20
-    container_name: chasperli
     hostname: chasperli
     network_mode: host
     volumes:
